@@ -16,10 +16,11 @@
     background: blue;
 }
 
+
 .dropdown:hover>.dropdown-menu {
     display: block;
-  }
-  
+}
+
 .dropdown>.dropdown-toggle:active {
     /*Without this, clicking will make it sticky*/
     pointer-events: none;
@@ -40,7 +41,7 @@ button{
     font-size: 15pt;
 }
 
-body {
+body{
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -52,7 +53,7 @@ body {
 
 .filter_panel{
     display: flex;
-    background: green;
+    border: 1px solid;
     justify-content:start;
     flex-direction: column;
     align-items: left;
