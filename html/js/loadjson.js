@@ -1,0 +1,483 @@
+const data = {
+    "categories": [
+        {
+            "name": "Велосипеды",
+            "subcategories": [
+                {
+                    "name": "Santa Fixie",
+                    "products": [
+                        {
+                            "name": "Model A",
+                            "price": 500,
+                            "frameMaterial": "Сталь",
+                            "color": "Красный",
+                            "id": "e42275fa-c2f6-488b-8e59-3af5699b8e9c"
+                        },
+                        {
+                            "name": "Model B",
+                            "price": 600,
+                            "frameMaterial": "Алюминий",
+                            "color": [
+                                "Красный",
+                                "Синий",
+                                "Зеленый"
+                            ],
+                            "id": "5ff7ccaf-8b34-4886-9a8b-8048fbe0b44c"
+                        },
+                        {
+                            "name": "Model C",
+                            "price": 700,
+                            "frameMaterial": "Карбон",
+                            "color": [
+                                "Красный",
+                                "Зеленый"
+                            ],
+                            "id": "6369d37c-6daa-4640-a984-446123527930"
+                        },
+                        {
+                            "name": "Model D",
+                            "price": 550,
+                            "frameMaterial": "Сталь",
+                            "color": [
+                                "Черный",
+                                "Синий"
+                            ],
+                            "id": "b2c02a19-d6c5-4f1f-b096-40c0e14ccfad"
+                        }
+                    ]
+                },
+                {
+                    "name": "State Bicycle",
+                    "products": [
+                        {
+                            "name": "Model X",
+                            "price": 450,
+                            "frameMaterial": "Сталь",
+                            "color": [
+                                "Черный",
+                                "Белый"
+                            ],
+                            "id": "9892f45f-6b6a-4570-9946-2ddbee75fa7e"
+                        },
+                        {
+                            "name": "Model Y",
+                            "price": 520,
+                            "frameMaterial": "Алюминий",
+                            "color": [
+                                "Синий",
+                                "Зеленый"
+                            ],
+                            "id": "89f57015-25fc-4309-99e3-4efc3a3ac68b"
+                        },
+                        {
+                            "name": "Model Z",
+                            "price": 620,
+                            "frameMaterial": "Карбон",
+                            "color": "Синий",
+                            "id": "76dcf715-1b43-447d-8af5-a3b147f3e213"
+                        },
+                        {
+                            "name": "Model W",
+                            "price": 480,
+                            "frameMaterial": "Сталь",
+                            "color": [
+                                "Красный",
+                                "Синий",
+                                "Зеленый",
+                                "Оранжевый"
+                            ],
+                            "id": "b2cf994a-8fb2-4461-b8d4-8b9f3dce31d0"
+                        }
+                    ]
+                },
+                {
+                    "name": "Aventon",
+                    "products": [
+                        {
+                            "name": "Model M",
+                            "price": 520,
+                            "frameMaterial": "Сталь",
+                            "color": "Черный",
+                            "id": "cd748a28-fa51-455f-b70a-5a5f63c1b232"
+                        },
+                        {
+                            "name": "Model N",
+                            "price": 590,
+                            "frameMaterial": "Алюминий",
+                            "color": "Красный",
+                            "id": "6c5db1fc-6dac-4e9d-8b89-a80c6c0f9f99"
+                        },
+                        {
+                            "name": "Model O",
+                            "price": 650,
+                            "frameMaterial": "Карбон",
+                            "color": [
+                                "Черный",
+                                "Белый",
+                                "Серый",
+                                "Коричневый"
+                            ],
+                            "id": "48a9a5ad-c830-498e-9880-d7e71d6e40a6"
+                        },
+                        {
+                            "name": "Model P",
+                            "price": 530,
+                            "frameMaterial": "Сталь",
+                            "color": [
+                                "Желтый",
+                                "Фиолетовый",
+                                "Розовый",
+                                "Голубой",
+                                "Коричневый"
+                            ],
+                            "id": "589ec539-408b-4ed5-a2af-a90a0edb4846"
+                        }
+                    ]
+                },
+                {
+                    "name": "6KU",
+                    "products": [
+                        {
+                            "name": "Model J",
+                            "price": 470,
+                            "frameMaterial": "Сталь",
+                            "color": "Синий",
+                            "id": "ace19462-61bf-4599-a7e8-7ef550e7d1a5"
+                        },
+                        {
+                            "name": "Model K",
+                            "price": 550,
+                            "frameMaterial": "Алюминий",
+                            "color": [
+                                "Красный",
+                                "Синий",
+                                "Зеленый",
+                                "Оранжевый",
+                                "Фиолетовый"
+                            ],
+                            "id": "a8b52f11-3800-4c6b-9dcb-b2fa056b1e65"
+                        },
+                        {
+                            "name": "Model L",
+                            "price": 610,
+                            "frameMaterial": "Карбон",
+                            "color": [
+                                "Белый",
+                                "Черный"
+                            ],
+                            "id": "d14eb796-086c-435b-a51a-e3ef6fff7bfc"
+                        },
+                        {
+                            "name": "Model I",
+                            "price": 480,
+                            "frameMaterial": "Сталь",
+                            "color": "Красный",
+                            "id": "844db77d-9891-485b-941d-3974d6e8ecbd"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Аксессуары",
+            "subcategories": [
+                {
+                    "name": "Замки",
+                    "products": [
+                        {
+                            "name": "Замок A",
+                            "price": 20,
+                            "id": "659f229c-fc84-4d42-a543-b9d1826fc764"
+                        },
+                        {
+                            "name": "Замок B",
+                            "price": 15,
+                            "id": "060abab1-66bf-4b6f-91ed-bdfcabff560b"
+                        },
+                        {
+                            "name": "Замок C",
+                            "price": 30,
+                            "id": "5a4837e9-1dad-4c92-bc38-18c7991fac09"
+                        },
+                        {
+                            "name": "Замок D",
+                            "price": 10,
+                            "id": "5e676a11-50dc-4ea5-9b3d-9b82a7552a01"
+                        }
+                    ]
+                },
+                {
+                    "name": "Фонарики",
+                    "products": [
+                        {
+                            "name": "Фонарик E",
+                            "price": 18,
+                            "id": "ae7b1c22-72db-4ff8-9731-4ebd158fc499"
+                        },
+                        {
+                            "name": "Фонарик F",
+                            "price": 12,
+                            "id": "98095969-2bac-41a5-aea4-300403a1aced"
+                        },
+                        {
+                            "name": "Фонарик G",
+                            "price": 28,
+                            "id": "6f09bf35-f308-4fd9-973a-92188e1b51cd"
+                        },
+                        {
+                            "name": "Фонарик H",
+                            "price": 8,
+                            "id": "01a9c920-d596-4e3f-8969-df0d964a427d"
+                        }
+                    ]
+                },
+                {
+                    "name": "Шлемы",
+                    "products": [
+                        {
+                            "name": "Шлем I",
+                            "price": 22,
+                            "id": "682529df-ce39-4667-a635-f7d69a2e4d43"
+                        },
+                        {
+                            "name": "Шлем J",
+                            "price": 14,
+                            "id": "abafa530-d42b-4753-b8f3-b44930708635"
+                        },
+                        {
+                            "name": "Шлем K",
+                            "price": 32,
+                            "id": "47c57f2e-59df-430b-968e-a6444647b3b8"
+                        },
+                        {
+                            "name": "Шлем L",
+                            "price": 12,
+                            "id": "910a93fe-5424-4b0b-89fa-bf7c3545c835"
+                        }
+                    ]
+                },
+                {
+                    "name": "Насосы",
+                    "products": [
+                        {
+                            "name": "Насос 1",
+                            "price": 22,
+                            "id": "152724ca-49d7-4775-b780-90e4c2f8fe1f"
+                        },
+                        {
+                            "name": "Насос 2",
+                            "price": 14,
+                            "id": "bf3fb28f-c78e-47f3-bc52-531ffe2b3b68"
+                        },
+                        {
+                            "name": "Нассо 3",
+                            "price": 32,
+                            "id": "437af767-6214-4514-9902-9eec8f4d6091"
+                        },
+                        {
+                            "name": "Насос 4",
+                            "price": 12,
+                            "id": "39586361-60a5-4218-9840-ba02be20eee0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Запчасти",
+            "subcategories": [
+                {
+                    "name": "Колеса",
+                    "products": [
+                        {
+                            "name": "Колесо 1",
+                            "price": 50,
+                            "diameter": "28",
+                            "id": "db9f03c6-60c6-4267-a887-2aa10cfeb400"
+                        },
+                        {
+                            "name": "Колесо 2",
+                            "price": 55,
+                            "diameter": "29",
+                            "id": "7ef7c335-1995-441a-8330-dcf3a5287a5f"
+                        },
+                        {
+                            "name": "Колесо 3",
+                            "price": 60,
+                            "diameter": "28",
+                            "id": "69bca552-c5aa-42a4-be13-95b7505f4ed0"
+                        },
+                        {
+                            "name": "Колесо 4",
+                            "price": 52,
+                            "diameter": "29",
+                            "id": "f69c2096-aad4-4d04-b223-bea623cc374e"
+                        },
+                        {
+                            "name": "Колесо 5",
+                            "price": 48,
+                            "diameter": "28",
+                            "id": "6bb422c2-8ab8-4380-97ad-1dc3a37abf82"
+                        }
+                    ]
+                },
+                {
+                    "name": "Вилки",
+                    "products": [
+                        {
+                            "name": "Вилка A",
+                            "price": 75,
+                            "material": "Карбон",
+                            "id": "8655b021-f0ce-44d8-8ed4-07ef6d049317"
+                        },
+                        {
+                            "name": "Вилка B",
+                            "price": 60,
+                            "material": "Алюминий",
+                            "id": "458dcd6d-65a9-4d58-8992-fe82990f600c"
+                        },
+                        {
+                            "name": "Вилка C",
+                            "price": 70,
+                            "material": "Карбон",
+                            "id": "1312ec09-40a2-4119-9237-439b65a450cb"
+                        },
+                        {
+                            "name": "Вилка D",
+                            "price": 65,
+                            "material": "Алюминий",
+                            "id": "7ccac494-d776-4c89-950e-98db743b6ab1"
+                        },
+                        {
+                            "name": "Вилка E",
+                            "price": 72,
+                            "material": "Карбон",
+                            "id": "63133c20-50b0-4d34-81df-7f6e121af596"
+                        }
+                    ]
+                },
+                {
+                    "name": "Тормоза",
+                    "products": [
+                        {
+                            "name": "Тормоз 1",
+                            "price": 35,
+                            "type": "Дисковый",
+                            "id": "21632c8d-4cd9-4fae-bdb7-34053a9e344e"
+                        },
+                        {
+                            "name": "Тормоз 2",
+                            "price": 30,
+                            "type": "Дисковый",
+                            "id": "e9ead669-1c65-44c5-8d34-02078d6c4655"
+                        },
+                        {
+                            "name": "Тормоз 3",
+                            "price": 40,
+                            "type": "Ободной",
+                            "id": "cc83012c-c113-45ac-88a0-4250abdf780e"
+                        },
+                        {
+                            "name": "Тормоз 4",
+                            "price": 32,
+                            "type": "Ободной",
+                            "id": "ac6456a9-8494-4a7b-8736-998c12f75f08"
+                        },
+                        {
+                            "name": "Тормоз 5",
+                            "price": 38,
+                            "type": "Дисковый",
+                            "id": "f71e76b0-9258-4cb1-9340-17e118c17b81"
+                        }
+                    ]
+                },
+                {
+                    "name": "Управление",
+                    "products": [
+                        {
+                            "name": "Грипсы A",
+                            "price": 15,
+                            "id": "feb29a7a-d558-49cd-a69d-6761c31b8f7a"
+                        },
+                        {
+                            "name": "Руль B",
+                            "price": 20,
+                            "id": "c311a683-a10c-48eb-8a83-90772f006923"
+                        },
+                        {
+                            "name": "Втулка C",
+                            "price": 25,
+                            "id": "5b76c04d-fbea-48fe-8be7-da600d4e2686"
+                        },
+                        {
+                            "name": "Педали D",
+                            "price": 10,
+                            "id": "945739a4-ea46-48fc-bfc2-093b07dd83bb"
+                        },
+                        {
+                            "name": "Седло E",
+                            "price": 18,
+                            "id": "068809db-d8f0-47e9-b8ab-9db2a5abca1c"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+//const data = JSON.parse(dataJSON);
+//import { Product } from './class_product.js';
+var new_product;
+ function getProductFromJson(cat, subcat, numberProduct) {
+    let count = 0;
+    if (data && data.categories) {
+        data.categories.forEach(category => {
+          //console.log(`Category: ${category.name}`);
+          //var cat_name = category.name;
+          category.subcategories.forEach(subcategory => {
+              //console.log(`Subcategory: ${subcategory.name}`);
+              //var subcat_name = subcategory.name;
+              subcategory.products.forEach(product => {
+                  //console.log(`Product: ${product.name}, Price: ${product.price}`);
+                  if((!cat || cat===category.name) && (!subcat || subcat===subcategory.name) && count === numberProduct) {
+                      var pname = product.name;
+                      if(cat==="Велосипеды") {
+                         pname = subcategory.name + " " + pname;
+                        }
+                      new_product = new Product(product.id, pname, product.price);
+                  }
+
+                  if((!cat || cat===category.name) && (!subcat || subcat===subcategory.name)) count++;
+              });
+              
+          });
+        });
+      } else {
+        console.error('JSON data is undefined or does not contain categories');
+      }
+      return new_product;
+}
+
+ function countProductsJSON(cat, subcat) {
+    let count = 0;
+    if (data && data.categories) {
+        data.categories.forEach(category => {
+          //console.log(`Category: ${category.name}`);
+          //var cat_name = category.name;
+          category.subcategories.forEach(subcategory => {
+              //console.log(`Subcategory: ${subcategory.name}`);
+              //var subcat_name = subcategory.name;
+              subcategory.products.forEach(product => {
+                  //console.log(`Product: ${product.name}, Price: ${product.price}`);
+                  if((!cat || cat===category.name) && (!subcat || subcat===subcategory.name)) {
+                        count ++;
+                  }
+              });
+              
+          });
+        });
+      } else {
+        console.error('JSON data is undefined or does not contain categories');
+      }
+      return count;
+}

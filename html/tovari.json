@@ -1,0 +1,334 @@
+{
+    "categories": [
+      {
+        "name": "Велосипеды",
+        "brands": [
+          {
+            "name": "Santa Fixie",
+            "models": [
+              {
+                "name": "Model A",
+                "price": 500,
+                "frameMaterial": "Сталь",
+                "color": "Красный"
+              },
+              {
+                "name": "Model B",
+                "price": 600,
+                "frameMaterial": "Алюминий",
+                "color": ["Красный", "Синий", "Зеленый"]
+              },
+              {
+                "name": "Model C",
+                "price": 700,
+                "frameMaterial": "Карбон",
+                "color": ["Красный", "Зеленый"]
+              },
+              {
+                "name": "Model D",
+                "price": 550,
+                "frameMaterial": "Сталь",
+                "color": ["Черный", "Синий"]
+              }
+            ]
+          },
+          {
+            "name": "State Bicycle",
+            "models": [
+              {
+                "name": "Model X",
+                "price": 450,
+                "frameMaterial": "Сталь",
+                "color": ["Черный", "Белый"]
+              },
+              {
+                "name": "Model Y",
+                "price": 520,
+                "frameMaterial": "Алюминий",
+                "color": ["Синий", "Зеленый"]
+              },
+              {
+                "name": "Model Z",
+                "price": 620,
+                "frameMaterial": "Карбон",
+                "color": "Синий"
+              },
+              {
+                "name": "Model W",
+                "price": 480,
+                "frameMaterial": "Сталь",
+                "color": ["Красный", "Синий", "Зеленый", "Оранжевый"]
+              }
+            ]
+          },
+          {
+            "name": "Aventon",
+            "models": [
+              {
+                "name": "Model M",
+                "price": 520,
+                "frameMaterial": "Сталь",
+                "color": "Черный"
+              },
+              {
+                "name": "Model N",
+                "price": 590,
+                "frameMaterial": "Алюминий",
+                "color": "Красный"
+              },
+              {
+                "name": "Model O",
+                "price": 650,
+                "frameMaterial": "Карбон",
+                "color": ["Черный", "Белый", "Серый", "Коричневый"]
+              },
+              {
+                "name": "Model P",
+                "price": 530,
+                "frameMaterial": "Сталь",
+                "color": ["Желтый", "Фиолетовый", "Розовый", "Голубой", "Коричневый"]
+              }
+            ]
+          },
+          {
+            "name": "6KU",
+            "models": [
+              {
+                "name": "Model J",
+                "price": 470,
+                "frameMaterial": "Сталь",
+                "color": "Синий"
+              },
+              {
+                "name": "Model K",
+                "price": 550,
+                "frameMaterial": "Алюминий",
+                "color": ["Красный", "Синий", "Зеленый", "Оранжевый", "Фиолетовый"]
+              },
+              {
+                "name": "Model L",
+                "price": 610,
+                "frameMaterial": "Карбон",
+                "color": ["Белый", "Черный"]
+              },
+              {
+                "name": "Model I",
+                "price": 480,
+                "frameMaterial": "Сталь",
+                "color": "Красный"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Аксессуары",
+        "subcategories": [
+          {
+            "name": "Замки",
+            "products": [
+              {
+                "name": "Замок A",
+                "price": 20
+              },
+              {
+                "name": "Замок B",
+                "price": 15
+              },
+              {
+                "name": "Замок C",
+                "price": 30
+              },
+              {
+                "name": "Замок D",
+                "price": 10
+              }
+            ]
+          },
+          {
+            "name": "Фонарики",
+            "products": [
+              {
+                "name": "Фонарик E",
+                "price": 18
+              },
+              {
+                "name": "Фонарик F",
+                "price": 12
+              },
+              {
+                "name": "Фонарик G",
+                "price": 28
+              },
+              {
+                "name": "Фонарик H",
+                "price": 8
+              }
+            ]
+          },
+          {
+            "name": "Шлемы",
+            "products": [
+              {
+                "name": "Шлем I",
+                "price": 22
+              },
+              {
+                "name": "Шлем J",
+                "price": 14
+              },
+              {
+                "name": "Шлем K",
+                "price": 32
+              },
+              {
+                "name": "Шлем L",
+                "price": 12
+              }
+            ]
+          },
+          {
+            "name": "Насосы",
+            "products": [
+              {
+                "name": "Насос 1",
+                "price": 22
+              },
+              {
+                "name": "Насос 2",
+                "price": 14
+              },
+              {
+                "name": "Нассо 3",
+                "price": 32
+              },
+              {
+                "name": "Насос 4",
+                "price": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Запчасти",
+        "subcategories": [
+          {
+            "name": "Колеса",
+            "products": [
+              {
+                "name": "Колесо 1",
+                "price": 50,
+                "diameter": "28"
+              },
+              {
+                "name": "Колесо 2",
+                "price": 55,
+                "diameter": "29"
+              },
+              {
+                "name": "Колесо 3",
+                "price": 60,
+                "diameter": "28"
+              },
+              {
+                "name": "Колесо 4",
+                "price": 52,
+                "diameter": "29"
+              },
+              {
+                "name": "Колесо 5",
+                "price": 48,
+                "diameter": "28"
+              }
+            ]
+          },
+          {
+            "name": "Вилки",
+            "products": [
+              {
+                "name": "Вилка A",
+                "price": 75,
+                "material": "Карбон"
+              },
+              {
+                "name": "Вилка B",
+                "price": 60,
+                "material": "Алюминий"
+              },
+              {
+                "name": "Вилка C",
+                "price": 70,
+                "material": "Карбон"
+              },
+              {
+                "name": "Вилка D",
+                "price": 65,
+                "material": "Алюминий"
+              },
+              {
+                "name": "Вилка E",
+                "price": 72,
+                "material": "Карбон"
+              }
+            ]
+          },
+          {
+            "name": "Тормоза",
+            "products": [
+              {
+                "name": "Тормоз 1",
+                "price": 35,
+                "type": "Дисковый"
+              },
+              {
+                "name": "Тормоз 2",
+                "price": 30,
+                "type": "Дисковый"
+              },
+              {
+                "name": "Тормоз 3",
+                "price": 40,
+                "type": "Ободной"
+              },
+              {
+                "name": "Тормоз 4",
+                "price": 32,
+                "type": "Ободной"
+              },
+              {
+                "name": "Тормоз 5",
+                "price": 38,
+                "type": "Дисковый"
+              }
+            ]
+          },
+          {
+            "name": "Управление",
+            "products": [
+              {
+                "name": "Грипсы A",
+                "price": 15
+              },
+              {
+                "name": "Руль B",
+                "price": 20
+              },
+              {
+                "name": "Втулка C",
+                "price": 25
+              },
+              {
+                "name": "Педали D",
+                "price": 10
+              },
+              {
+                "name": "Седло E",
+                "price": 18
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

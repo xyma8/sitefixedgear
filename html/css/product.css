@@ -1,0 +1,70 @@
+.main_info {
+    background-color: green;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.main_info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.images{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: crimson;
+}
+
+.flexslider {
+    width: 500px;
+    height: 330px;
+}
+
+.flexslider .slides img {
+    width: 500px;
+    height: 330px;
+}
+
+.info {
+    font-size: 30px;
+    
+    background-color: burlywood;
+}
+
+.info b{
+    color: red;
+}
+
+.info button{
+    background-color: red;
+    color: white;
+    width: 180px;
+    height: 60px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.select_size {
+    margin-top: 10px;
+}
+.select_size p{
+    margin-bottom: -5px;
+    font-size: 20px;
+}
+
+.description b{
+    font-size: 30px;
+}
+
+.table_description {
+    font-size: 20px;
+}
+
+.table_description th{
+    padding-right: 30px;
+}
+
