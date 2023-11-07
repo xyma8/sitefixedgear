@@ -1,3 +1,4 @@
+const breadcrumbList = document.querySelector('.breadcrumb');
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
@@ -6,6 +7,7 @@ const id = urlParams.get('id');
 var product_name, product_price;
 
 loadJSON();
+breadcrumb();
 // Загрузка JSON-файла
 function loadJSON() {
     fetch('./tovari2.json')
@@ -40,4 +42,12 @@ function loadJSON() {
     const productPrice = document.getElementById("product_price");
     productName.textContent = product_name;
     productPrice.textContent = `${product_price} ₽`;
+
+    setNameInBreadcrumb();
+ }
+
+ function setNameInBreadcrumb() {
+    const activeBreadcrumb = document.querySelector(".breadcrumb-item.active");
+    const textBreadcrumb = activeBreadcrumb.querySelector("a");
+    textBreadcrumb.textContent = product_name;
  }

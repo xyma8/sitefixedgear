@@ -75,27 +75,11 @@ fetch('./tovari2.json')
 */
 function route() {
   const urlParams = new URLSearchParams(window.location.search);
-  var category = urlParams.get('category');
-  var subcategory = urlParams.get('subcategory');
+  let category = urlParams.get('category');
+  let subcategory = urlParams.get('subcategory');
   if(!category) redirectToCategoryPage('?category=Велосипеды')
   selectedCategory = category;
   selectedSubcat = subcategory;
-}
-
-function breadcrumb() {
-  var newBreadcrumbItem = document.createElement('li');
-  newBreadcrumbItem.textContent = selectedCategory;
-  breadcrumbList.appendChild(newBreadcrumbItem);
-  newBreadcrumbItem.className = 'breadcrumb-item active';
-
-  if(selectedSubcat) {
-    newBreadcrumbItem.className = 'breadcrumb-item';
-    var newBreadcrumbItem1 = document.createElement('li');
-    newBreadcrumbItem1.textContent = selectedSubcat;
-    breadcrumbList.appendChild(newBreadcrumbItem1);
-    newBreadcrumbItem1.className = 'breadcrumb-item active';
-  }
-
 }
 
 function createProductCard(product) {
@@ -129,21 +113,35 @@ function createProductCard(product) {
         // Получаем уникальный id из data-id атрибута
         var productId = this.getAttribute('data-id');
         // Перенаправляем на product.html с передачей id в URL
-        window.location.href = 'product.html?id=' + productId;
+
+        window.location.href = addURLProduct(productId);
     });
     return card;
 }
 
 function addProductCardToContainer(current_page) {
   productContainer.innerHTML = "";
-  for(let i = current_page * productPerPage - productPerPage; i<current_page*productPerPage; i++) {
+  let i = 0; // выносим так как нужна проверка
+  for(i = current_page * productPerPage - productPerPage; i<current_page*productPerPage; i++) {
   if(i>countProduct-1) break;
    const product = getProductFromJson(selectedCategory, selectedSubcat, i);
    if(product === undefined) break; // наверное не нужно и не работает
    const card = createProductCard(product);
    productContainer.appendChild(card);
   }
-  new HvrSlider('.images'); // очень важная штука
+
+  if(i<=0 || isNaN(i)|| !i || typeof i !== 'number')
+    window.location.href = "first.html";
+  
+  new HvrSlider('.images'); // очень важно
+}
+
+function addURLProduct(productId) {
+  const URLParams = new URLSearchParams(window.location.search);
+  URLParams.delete('page'); // если есть удаляет
+  URLParams.set('id', productId);
+  const newURL = 'product.html?'+ URLParams.toString();
+  return newURL;
 }
 
 /*
@@ -220,9 +218,14 @@ function updateURL(page) {
 function updatePagination(countProduct, productPerPage) {
   pagination.innerHTML = "";
   const totalPages = Math.ceil(countProduct / productPerPage);
+  //if(totalPages == 0) window.location.href = "first.html";
   if(currentPage>totalPages) {
      goToPage(totalPages);
      pagination.innerHTML = "";
+  }
+  if(currentPage<0) {
+    goToPage(1);
+    pagination.innerHTML = "";
   }
   //console.log(countProduct);
 

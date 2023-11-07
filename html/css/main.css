@@ -46,6 +46,12 @@ body{
     margin: 0 auto;
 }
 
+.breadcrumb-item.active a {
+    pointer-events: none; /* Сделать активную хлебную крошку некликабельной */
+    color: inherit; /* Наследовать цвет текста от родительского элемента */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
 .content{
     display: grid;
     grid-template-columns: 25% 75%;
