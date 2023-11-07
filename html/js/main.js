@@ -4,21 +4,16 @@
 //import { updatePagination } from './pagination.js';
 const pagination = document.getElementById("pagination");
 const productContainer = document.querySelector(".products");
+const breadcrumbList = document.querySelector('.breadcrumb');
 
 //page('/zapchasti', function(){
  //   console.log("sdka");
   //});
 
-//const breadcrumbList = document.querySelector('.breadcrumb');
-//const newBreadcrumbItem = document.createElement('li');
-//newBreadcrumbItem.className = 'breadcrumb-item active';
-//newBreadcrumbItem.textContent = decodeURIComponent(hash.replace("/", ""));
-//breadcrumbList.appendChild(newBreadcrumbItem);
-
 var selectedCategory = null;
 var selectedSubcat = null;
 route();
-
+breadcrumb();
 //const countProduct = countProductsJSON(selectedCategory, selectedSubcat);
 const productPerPage = 8;
 let countProduct = countProductsJSON(selectedCategory, selectedSubcat);
@@ -80,14 +75,28 @@ fetch('./tovari2.json')
 */
 function route() {
   const urlParams = new URLSearchParams(window.location.search);
-  const category = urlParams.get('category');
-  const subcategory = urlParams.get('subcategory');
-  console.log(category); // Выводит 'Запчасти'
-  console.log(subcategory); // Выводит 'Вилки'
+  var category = urlParams.get('category');
+  var subcategory = urlParams.get('subcategory');
+  if(!category) redirectToCategoryPage('?category=Велосипеды')
   selectedCategory = category;
   selectedSubcat = subcategory;
 }
 
+function breadcrumb() {
+  var newBreadcrumbItem = document.createElement('li');
+  newBreadcrumbItem.textContent = selectedCategory;
+  breadcrumbList.appendChild(newBreadcrumbItem);
+  newBreadcrumbItem.className = 'breadcrumb-item active';
+
+  if(selectedSubcat) {
+    newBreadcrumbItem.className = 'breadcrumb-item';
+    var newBreadcrumbItem1 = document.createElement('li');
+    newBreadcrumbItem1.textContent = selectedSubcat;
+    breadcrumbList.appendChild(newBreadcrumbItem1);
+    newBreadcrumbItem1.className = 'breadcrumb-item active';
+  }
+
+}
 
 function createProductCard(product) {
     const card = document.createElement("div");

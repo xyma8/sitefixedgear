@@ -39,5 +39,5 @@ function loadJSON() {
     const productName = document.getElementById("product_name");
     const productPrice = document.getElementById("product_price");
     productName.textContent = product_name;
-    productPrice.textContent = product_price;
+    productPrice.textContent = `${product_price} ₽`;
  }
