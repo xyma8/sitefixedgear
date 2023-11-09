@@ -10,23 +10,15 @@
 .main_info{
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+.slider {
     
 }
 
-.images{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: crimson;
-}
-
-.flexslider {
-    width: 500px;
-    height: 330px;
-}
-
 .flexslider .slides img {
-    width: 500px;
-    height: 330px;
+    max-width: 100%;
+    height: auto;  
 }
 
 .info {
@@ -44,7 +36,7 @@
     color: white;
     width: 180px;
     height: 60px;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 20px;
 }
 
@@ -54,6 +46,10 @@
 .select_size p{
     margin-bottom: -5px;
     font-size: 20px;
+}
+
+.bcart.active {
+    background-color: darkcyan;
 }
 
 .description b{
@@ -68,4 +64,29 @@
     padding-right: 30px;
 }
 
+
+@media (max-width: 768px) {
+    .main_info{
+        display: block;
+           
+    }
+
+    .images {
+        display: block;
+
+    }
+
+    .info{
+        text-align: center;
+    }
+
+    .description b{
+        font-size: 20px;
+    }
+
+    .breadcrumb {
+        font-size: 14px;
+    }
+
+}
 

@@ -11,7 +11,7 @@ function breadcrumb() {
     let newBreadcrumbItem;
     URLParams.forEach((value, key) => {
       paramsObject[key] = value;
-      URL += `${key}=${value}`;
+      URL += `${key}=${value}&`;
       newBreadcrumbItem = document.createElement('li');
       var newLink = document.createElement('a');
       newLink.textContent = value;

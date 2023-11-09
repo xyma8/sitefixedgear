@@ -1,0 +1,38 @@
+
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.thumbnail{
+    max-width: 100%;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%; /* Устанавливает максимальную ширину */
+}
+
+#btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none; /* Удаляет границу */
+    outline: none; /* Удаляет контур при фокусировке */
+    z-index: 1; /* Позволяет кнопке находиться над изображением */
+}
+
+#btn:hover{
+    background-color: red;
+}
+
+.content h2{
+    font-size: 25px;
+}

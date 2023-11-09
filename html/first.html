@@ -5,85 +5,148 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="main.css">
-
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/first.css">
         <div class="header">
-            <div class="logo">
-                <img src="logo.png" alt="" width=100px/>
+          <div class="logo" onclick="redirectToFirst()">
+              <img src="img/logo.png" alt="" width=100px/>
+          </div>
+
+          <button onclick="redirectToCategoryPage('main.html?category=Велосипеды')">
+              Велосипеды
+          </button>
+
+          <div class="dropdown"> 
+              
+              <button
+                onclick="redirectToCategoryPage('main.html?category=Запчасти')"
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Запчасти
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="main.html?category=Запчасти&subcategory=Колеса">Колеса</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Запчасти&subcategory=Вилки">Вилки</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Запчасти&subcategory=Тормоза">Тормоза</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Запчасти&subcategory=Управление">Управление</a></li>
+              </ul>
             </div>
 
-            <button>
-                <a href="main.html">
-                Велосипеды
-                </a>
-            </button>
 
-            <div class="dropdown">
-                <button
-                  class="dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-mdb-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Запчасти
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" href="#">Колеса</a></li>
-                  <li><a class="dropdown-item" href="#">Привод</a></li>
-                  <li><a class="dropdown-item" href="#">Управление</a></li>
-                  <li><a class="dropdown-item" href="#">Тормоза</a></li>
-                  <li><a class="dropdown-item" href="#">Вилки</a></li>
-                </ul>
-              </div>
-
-
-            <div class="dropdown">
-                <button
-                  class="dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-mdb-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Аксессуары
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" href="#">Замки и цепи</a></li>
-                  <li><a class="dropdown-item" href="#">Фонарики</a></li>
-                  <li><a class="dropdown-item" href="#">Насосы</a></li>
-                  <li><a class="dropdown-item" href="#">Крылья</a></li>
-                </ul>
-              </div>
-
-            <button>
-                Контакты
-            </button>
-
-            <div class="buttons_user">
-                <button class="button_profil">
-                    <img src="profil.png" alt="" width="33px"/>
-                </button>
-
-                <button class="button_cart">
-                    <img src="cart.png" alt="" width="33px"/>
-                </button>
+          <div class="dropdown">
+              <button
+                onclick="redirectToCategoryPage('main.html?category=Аксессуары')"
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Аксессуары
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="main.html?category=Аксессуары&subcategory=Замки">Замки</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Аксессуары&subcategory=Фонарики">Фонарики</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Аксессуары&subcategory=Шлемы">Шлемы</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Аксессуары&subcategory=Насосы"">Насосы</a></li>
+              </ul>
             </div>
-        </div>
+
+          <button>
+              Контакты
+          </button>
+
+          <div class="button_cart" onclick="redirectToCart()">
+              <img src="img/cart.png" alt="" width="35px"/>
+              <div class="cart-count" id="cart1">0</div>
+          </div>
+      </div>
+      
+        <div class="header-mobile">
+          <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="mobile-menu">
+
+            <ul>
+              <li onclick="closebutton()">&#10005</li>
+              <li><a href="main.html?category=Велосипеды">Велосипеды</a></li>
+              <li class="sub-menu" onclick="show('prs')">
+                <a>Запчасти ˅</a>
+                <ul id="prs">
+                  <li><a href="main.html?category=Запчасти&subcategory=Колеса">Колеса</a></li>
+                  <li><a href="main.html?category=Запчасти&subcategory=Вилки">Вилки</a></li>
+                  <li><a href="main.html?category=Запчасти&subcategory=Тормоза">Тормоза</a></li>
+                  <li><a href="main.html?category=Запчасти&subcategory=Управление">Управление</a></li>
+                </ul>
+              </li>
+              <li class="sub-menu" onclick="show('acs')">
+                <a>Аксессуары ˅</a>
+                <ul id="acs">
+                  <li><a href="main.html?category=Аксессуары&subcategory=Замки">Замки</a></li>
+                  <li><a href="main.html?category=Аксессуары&subcategory=Фонарики">Фонарики</a></li>
+                  <li><a href="main.html?category=Аксессуары&subcategory=Шлемы">Шлемы</a></li>
+                  <li><a href="main.html?category=Аксессуары&subcategory=Насосы">Насосы</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="button_cart" onclick="redirectToCart()">
+              <img src="img/cart.png" alt="" width="35px"/>
+              <div class="cart-count" id="cart2">0</div>
+          </div>
+      </div>
+
+      <script src="js/class_product.js"></script>
+      <script src="js/header.js"></script>
     </head>
 
     <body>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">Главная</li>
-            </ol>
-        </nav>
-
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Главная</li>
+        </ol>
+      </nav>
+      <div class="content">
+        
+        <div class="img-container">
+          <img class="thumbnail" src="img/banner_02.jpg" alt="image">
+          <button onclick="redirectToMain()" id="btn">Смотреть каталог</button>
+        </div>
         <h2> Велосипеды Fixed Gear
             Что такое велосипед fixed gear? Почему стоит купить велосипед с фиксированой передачей, а не классический круизер?
-            
+            <br><br>
             Велосипед фиксед гир (англ. fixed gear) — велосипед с фиксированной передачей, у которого в конструкции нет свободного хода, и колеса при езде продолжают крутиться, даже если мы перестаем крутить педали. Фикс велосипеды устроены просто: при движении педали вращаются всегда!
-            
-            Это заставляет педали крутиться при вращении колеса, причем как при езде вперед, так и при движении назад. Другое название подобных моделей — fixed gear bike.</h2>
+            <br><br>
+            Это заставляет педали крутиться при вращении колеса, причем как при езде вперед, так и при движении назад. Другое название подобных моделей — fixed gear bike.
+            <br><br>
+            Неискушенным новичкам кажется, что кататься на подобных байках невероятно сложно (если вообще возможно). Но ключевое слово тут — «кажется»! Уже через пару дней все особенности фикс велосипеда станут для вас привычными и удобными, а чем чаще вы будете кататься, тем больше удовольствия принесет вам этот процесс. И, поверьте, тут есть чем насладиться!
+          </h2>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script type="text/javascript">
+      var image = document.getElementsByClassName('thumbnail');
+      new simpleParallax(image, {
+          scale: 1.62,
+          delay: 0.6,
+      });
+
+      function redirectToMain(){
+        window.location.href = "main.html";
+      }
+    </script>
     </body>
+
+    <footer>
+      <img src="img/logo.png" alt="" width=100px/>
+      <a>©2023 fixedgear — Интернет-магазин велосипедов фиксед гир</a>
+  </footer>
 </html>

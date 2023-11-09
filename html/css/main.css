@@ -1,34 +1,10 @@
 @font-face {
     font-family: 'main_font';
-    src: url(fonts/minecraft.ttf);
+    src: url('fonts/OpenSans-Medium.ttf');
 }
 
-.header{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    background: yellow;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo{
-    background: blue;
-}
-
-
-.dropdown:hover>.dropdown-menu {
-    display: block;
-}
-
-.dropdown>.dropdown-toggle:active {
-    /*Without this, clicking will make it sticky
-    pointer-events: none;*/
-}
-
-.buttons_user{
-    background: blue;
-    justify-content: space-evenly;
+*{
+    font-family: 'main_font';
 }
 
 button{
@@ -52,6 +28,8 @@ body{
     text-decoration: none; /* Убрать подчеркивание */
 }
 
+
+
 .content{
     display: grid;
     grid-template-columns: 25% 75%;
@@ -64,6 +42,7 @@ body{
     flex-direction: column;
     align-items: left;
     font-size: 15pt;
+    max-width: 100%;
 }
 
 
@@ -112,7 +91,10 @@ body{
     background:goldenrod;
     align-items: center;
     text-align: center;
-    font-size: 15pt;
+    font-size: 12pt;
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+    overflow: hidden; /* Скрываем текст, который не помещается в контейнер */
+    text-overflow: ellipsis; /* Добавляем многоточие для обрезанного текста */
     flex-direction: column;
 }
 
@@ -121,19 +103,6 @@ body{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Тень */
     cursor: pointer;
 }
-
-/*
-.carousel_img{
-    background:red;
-    display: flex;
-    align-items: center;
-}
-
-.carousel_img img{
-    max-width: 100%;
-    height: auto;  
-}
-*/
 
 .images img{
     height:250px;
@@ -146,6 +115,7 @@ body{
     display: flex;
     border: 1px solid;
     list-style: none;
+    justify-content: center;
     padding: 0;
 }
   
@@ -169,7 +139,7 @@ body{
     font-size: 18px; /* Увеличенный размер */
     font-weight: bold;
     color: red; /* Цвет по вашему выбору */
-  }
+}
 
 footer{
     display: flex;
@@ -179,4 +149,14 @@ footer{
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .content{
+        display: block;
+    }
+
+    .filter_panel {
+      display: none;
+    }
+
+}
 

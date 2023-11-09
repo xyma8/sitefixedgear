@@ -5,71 +5,109 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/product.css">
         
         <div class="header">
-            <div class="logo">
-                <img src="img/logo.png" alt="" width=100px/>
+          <div class="logo">
+              <img src="img/logo.png" alt="" width=100px/>
+          </div>
+
+          <button onclick="redirectToCategoryPage('main.html?category=Велосипеды')">
+              Велосипеды
+          </button>
+
+          <div class="dropdown"> 
+              
+              <button
+                onclick="redirectToCategoryPage('main.html?category=Запчасти')"
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Запчасти
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="main.html?category=Запчасти&subcategory=Колеса">Колеса</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Запчасти&subcategory=Вилки">Вилки</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Запчасти&subcategory=Тормоза">Тормоза</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Запчасти&subcategory=Управление">Управление</a></li>
+              </ul>
             </div>
 
-            <button onclick="redirectToCategoryPage()">
-                Велосипеды
-            </button>
 
-            <div class="dropdown"> 
-                
-                <button
-                  onclick="redirectToCategoryPage('zapchasti')"
-                  class="dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-mdb-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Запчасти
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" href="main.html#spare#wheels">Колеса</a></li>
-                  <li><a class="dropdown-item" href="#">Вилки</a></li>
-                  <li><a class="dropdown-item" href="#">Тормоза</a></li>
-                  <li><a class="dropdown-item" href="#">Управление</a></li>
-                </ul>
-              </div>
-
-
-            <div class="dropdown">
-                <button
-                  class="dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-mdb-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Аксессуары
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" href="#">Замки</a></li>
-                  <li><a class="dropdown-item" href="#">Фонарики</a></li>
-                  <li><a class="dropdown-item" href="#">Шлемы</a></li>
-                  <li><a class="dropdown-item" href="#">Насосы</a></li>
-                </ul>
-              </div>
-
-            <button>
-                Контакты
-            </button>
-
-            <div class="buttons_user">
-                <button class="button_profil">
-                    <img src="img/profil.png" alt="" width="33px"/>
-                </button>
-
-                <button class="button_cart">
-                    <img src="img/cart.png" alt="" width="33px"/>
-                </button>
+          <div class="dropdown">
+              <button
+                onclick="redirectToCategoryPage('main.html?category=Аксессуары')"
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Аксессуары
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="main.html?category=Аксессуары&subcategory=Замки">Замки</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Аксессуары&subcategory=Фонарики">Фонарики</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Аксессуары&subcategory=Шлемы">Шлемы</a></li>
+                <li><a class="dropdown-item" href="main.html?category=Аксессуары&subcategory=Насосы"">Насосы</a></li>
+              </ul>
             </div>
+
+          <button>
+              Контакты
+          </button>
+
+          <div class="button_cart" onclick="redirectToCart()">
+              <img src="img/cart.png" alt="" width="35px"/>
+              <div class="cart-count" id="cart1">0</div>
+          </div>
         </div>
+
+          <div class="header-mobile">
+            <div class="burger-menu">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <div class="mobile-menu">
+              <ul>
+                <li onclick="closebutton()">&#10005</li>
+                <li><a href="main.html?category=Велосипеды">Велосипеды</a></li>
+                <li class="sub-menu" onclick="show('prs')">
+                  <a>Запчасти ˅</a>
+                  <ul id="prs">
+                    <li><a href="main.html?category=Запчасти&subcategory=Колеса">Колеса</a></li>
+                    <li><a href="main.html?category=Запчасти&subcategory=Вилки">Вилки</a></li>
+                    <li><a href="main.html?category=Запчасти&subcategory=Тормоза">Тормоза</a></li>
+                    <li><a href="main.html?category=Запчасти&subcategory=Управление">Управление</a></li>
+                  </ul>
+                </li>
+                <li class="sub-menu" onclick="show('acs')">
+                  <a>Аксессуары ˅</a>
+                  <ul id="acs">
+                    <li><a href="main.html?category=Аксессуары&subcategory=Замки">Замки</a></li>
+                    <li><a href="main.html?category=Аксессуары&subcategory=Фонарики">Фонарики</a></li>
+                    <li><a href="main.html?category=Аксессуары&subcategory=Шлемы">Шлемы</a></li>
+                    <li><a href="main.html?category=Аксессуары&subcategory=Насосы">Насосы</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+
+          <div class="button_cart" onclick="redirectToCart()">
+              <img src="img/cart.png" alt="" width="35px"/>
+              <div class="cart-count" id="cart2">0</div>
+          </div>
+      </div>
+
+      <script src="js/class_product.js"></script>
+      <script src="js/header.js"></script>
     </head>
     
     <body>
@@ -86,7 +124,7 @@
                     <div class="flexslider">
                         <ul class="slides">
                             <li>
-                                <img src="bikes/santa_fixie/40mm/santa_fixie_matte_black_40mm_1.jpg" width="350px" height="250px" />
+                                <img src="bikes/santa_fixie/40mm/santa_fixie_matte_black_40mm_1.jpg" />
                             </li>
                             <li>
                                 <img src="bikes/santa_fixie/40mm/santa_fixie_matte_black_40mm_2.jpg" />
@@ -110,11 +148,12 @@
                     <div class="select_size">
                       <p>Размер рамы</p>
                       <select id="selector_size">
-                        <option value="1">52</option>
+                        <option value="52">52</option>
+                        <option value="54">54</option>
                       </select>
                     </div>
 
-                    <button>В корзину</button>
+                    <button class = "bcart" id="toCart" onclick="addToCart()">В корзину</button>
                 </div>
             </div>
 
@@ -147,4 +186,9 @@
 	    });
     </script>
     </body>
+
+    <footer>
+      <img src="img/logo.png" alt="" width=100px/>
+      <a>©2023 fixedgear — Интернет-магазин велосипедов фиксед гир</a>
+    </footer>
 </html>

@@ -157,11 +157,6 @@ productItems.forEach(function(item) {
 });
 */
 
-
-function redirectToCategoryPage(type) {
-    window.location.href = type;
-}
-
 function toggleCheckboxes(button) {
   const parent = button.parentNode;
   const checkboxes = parent.querySelector('.checkboxs');
