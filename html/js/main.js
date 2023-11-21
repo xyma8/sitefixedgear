@@ -18,7 +18,6 @@ breadcrumb();
 const productPerPage = 8;
 let countProduct = countProductsJSON(selectedCategory, selectedSubcat);
 let currentPage = 1; // Текущая страница
-console.log(countProduct);
 /*
 const countProductsJSON(selectedCategory, selectedSubcat)
   .then(count => {

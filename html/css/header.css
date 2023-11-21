@@ -11,13 +11,12 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background: yellow;
     max-width: 1200px;
     margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
 }
 
 .logo{
-    background: blue;
     cursor: pointer;
 }
 

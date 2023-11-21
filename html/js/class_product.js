@@ -39,8 +39,6 @@ class Cart {
     }
 
     addProduct(productInCart) {
-        //|| ((productInCart.size != 0) && productInCart.size != this.getProductById(productInCart.product.id).size) )
-
         if(!this.isItemInCart(productInCart)) {
             this.productsInCart.push(productInCart);
             console.log("dobl");
@@ -79,13 +77,6 @@ class Cart {
 
     
     removeQuantity(productInCart) {
-        /*
-        if(this.isItemInCart(productInCart)){
-            productInCart.quantity--;
-            localStorage.setItem("productsInCart", JSON.stringify(this.productsInCart));
-            if(productInCart.quantity == 0) this.deleteProduct(productInCart);
-        }
-        */
         this.productsInCart.forEach((el, index) => { 
             if(el.product.id === productInCart.product.id && el.size === productInCart.size) {
                 el.quantity--;

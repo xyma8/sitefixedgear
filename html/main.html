@@ -3,9 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fixed Gear</title>
+        <link rel="icon" href="img/bicycle_86130.ico" type="image/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/hoverslider.css">
+        <link rel="stylesheet" href="css/chat.css">
         <link rel="stylesheet" href="css/main.css">
         
         <div class="header">
@@ -172,7 +175,38 @@
                 </div>
 
             </div>
-
+            
+            <div class="chat-container">
+            <div class="chat-cnt" id="chat-cnt">
+                <div class="chat">
+                <strong>Чат-бот</strong>
+                  <div class="chat-history" id="chat-history">
+                    <!-- Здесь будут отображаться сообщения 
+                    <div class="msg" id="user">
+                        <div class="message user">
+                            <span class="message-sender">Вы:</span>
+                            <span class="message-text">Привет! Как я могу вам помочь?</span>
+                        </div>
+                    </div>
+                       Пример сообщения бота 
+                    <div class="msg" id="bot">
+                      <div class="message bot">
+                        <span class="message-sender">Бот:</span>
+                        <span class="message-text">Здравствуйте, я виртуальный помощник. Выберите вопрос который Вас интересует</span>
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="Введите сообщение...">
+                    <button onclick="sendMessage()">Отправить</button>
+                  </div>
+                </div>
+              
+              </div>
+              <div class="chat-button" id="chat-button">
+                <div class="chat-icon">💬</div>
+              </div>
+              </div>
             <div class="products">
                 <!-- Такие блоки генерируются
                 <div class="product_card" data-id="">
@@ -194,6 +228,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="js/breadcrumb.js"></script>
+    <script src="js/chat.js"></script>
     <script src="js/loadjson.js"></script>
     <script src="js/hoverslider.js"></script>
     <script src="js/main.js"></script>

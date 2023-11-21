@@ -33,6 +33,7 @@ body{
 .content{
     display: grid;
     grid-template-columns: 25% 75%;
+    border: 2px solid #333; 
 }
 
 .filter_panel{
@@ -45,7 +46,6 @@ body{
     max-width: 100%;
 }
 
-
 .filter_inputs_price{
     display: flex;
     flex-direction: row;
@@ -56,6 +56,9 @@ body{
     width: 40%;
 }
 
+.filters_checkboxs {
+    display: none;
+}
 
 .name_checkboxs{
     display: flex;
@@ -83,12 +86,12 @@ body{
 .products{
     display: grid;
     grid-template-columns: 50% 50%;
-    background: gray;
+    
 }
 
 .product_card{
     display: flex;
-    background:goldenrod;
+    
     align-items: center;
     text-align: center;
     font-size: 12pt;
@@ -100,7 +103,7 @@ body{
 
 .product_card:hover{
     border: 2px solid #333; /* Граница */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Тень */
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5); /* Тень */
     cursor: pointer;
 }
 
@@ -156,6 +159,10 @@ footer{
 
     .filter_panel {
       display: none;
+    }
+
+    .product_card {
+        border: 1px solid #333;    
     }
 
 }
